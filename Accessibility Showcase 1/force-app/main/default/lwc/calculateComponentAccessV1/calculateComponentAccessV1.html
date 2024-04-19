@@ -1,0 +1,39 @@
+<template>
+
+    <div class="divBorder">
+
+        <div class="headerIcon">
+            <img src={calculatorIconUrl} alt=""/>
+        </div>
+
+        <p>This is a Calculation component with HTML and LWC accessibility enhancements</p>
+
+        <lightning-input label="First input:" aria-label="First integer value for calculation" type="number" name="inputFirst" value={valueFirst} onchange={handleFirstInputChange}></lightning-input>
+
+        <br>
+        <b>Multiplied by:
+        <lightning-helptext
+            content="Multiply the two inputs"
+            class="slds-var-m-left_xx-small"
+        ></lightning-helptext>
+        </b>
+        <br>
+        <br>
+
+        <lightning-input label="Second input:" aria-label="Second integer value for calculation" type="number" name="inputSecond" value={valueSecond} onchange={handleSecondInputChange}></lightning-input>
+
+        <br>
+
+        <lightning-button-icon title="Multiply Values" aria-label="Multiply both input values" aria-live="assertive" icon-name="standard:assignment" class="slds-var-m-left_xx-small" onclick={handleCalculateClick}><label>Multiply</label></lightning-button-icon>
+
+        <br><br>
+
+        <div role="alert" aria-live="polite">
+            Result is <b>{calculationResultLabel}</b>
+        </div>
+        
+        <br><br>
+        What is Multiplication? <lightning-formatted-url value="en.wikipedia.org/wiki/Multiplication" target="_blank"></lightning-formatted-url>
+        
+    </div>
+</template>
