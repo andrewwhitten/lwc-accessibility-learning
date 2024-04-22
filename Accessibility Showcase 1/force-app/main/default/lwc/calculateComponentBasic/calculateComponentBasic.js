@@ -4,7 +4,7 @@ import CALC_ICON from "@salesforce/resourceUrl/Calc_Icon";
 
 export default class CalculateComponentBasic extends LightningElement {
 
-    calculatorIconUrl = CALC_ICON + ".jpg";
+    calculatorIconUrl = CALC_ICON; 
 
     valueFirst = 0;
     valueSecond = 0;
